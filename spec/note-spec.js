@@ -5,9 +5,8 @@ function testNoteTextDefault(){
   }
     catch(err) {
       return "Error - " + arguments.callee.name + " : " + err;
-    }
-
-    return "Pass - " + arguments.callee.name;
-  };
+  }
+  return "Pass - " + arguments.callee.name;
+};
 
 
