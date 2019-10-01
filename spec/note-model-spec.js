@@ -1,7 +1,7 @@
-function testNoteTextDefault(){
+function testCreateNoteWithText(){
   try {
-    var note = new Note();
-    assert.isTrue(note.getText() === "My favourite language is JavaScript");
+    let note = new Note("I love JavaScript!!");
+    assert.isTrue(note.getText() === "I love JavaScript!!");
   }
     catch(err) {
       return "Error - " + arguments.callee.name + " : " + err;

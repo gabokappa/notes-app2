@@ -1,15 +1,11 @@
 function testNoteList(){
     try {
-        let note1 = new Note();
-        let note2 = new Note();
-        let noteList = new NoteList();
-        noteList.add(note1);
-        noteList.add(note2);
+         let noteList = new NoteList();
 
-        // console.log(noteList.notes)
-        // console.log([note1,note2])
-        assert.isArrayEqual(noteList.notes , [note1,note2]) ;
-        // assert.isTrue(noteList[2].text === "My favourite language is JavaScript");
+        noteList.add("note1");
+        noteList.add("note2");
+
+        assert.isArrayEqual([noteList.notes[0].text,noteList.notes[1].text], ["note1","note2"])
 
     }
     catch(err) {
@@ -17,5 +13,24 @@ function testNoteList(){
     }
     return "Pass - " + arguments.callee.name;
 }
+
+function testNoteListReturnNotes(){
+    try {
+
+        let noteList = new NoteList();
+
+        noteList.add("note1");
+        noteList.add("note2");
+
+
+        assert.isTrue(noteList.returnNotes() ===  noteList.notes)
+
+    }
+    catch(err) {
+        return "Error - " + arguments.callee.name + " : " + err;
+    }
+    return "Pass - " + arguments.callee.name;
+}
+
 
 
