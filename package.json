@@ -1,0 +1,22 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "\"Notes app pairing exercise\"",
+  "main": "note-list-model.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ben-zeng/notes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ben-zeng/notes/issues"
+  },
+  "homepage": "https://github.com/ben-zeng/notes#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
