@@ -8,11 +8,13 @@
   <!-- include src files here... -->
   <script src="note-model.js"></script>
   <script src="note-list-model.js"></script>
+  <script src="note-list-view.js"></script>
 
 
   <!-- include spec files here... -->
   <script src="spec/note-model-spec.js"></script>
   <script src="spec/note-list-model-spec.js"></script>
+  <script src="spec/note-list-view-spec.js"></script>
 
   <script src="spec/assert.js"></script>
 
@@ -24,12 +26,18 @@
     $("#results").append("<li>" + testCreateNoteWithText()+"</li>");
     $("#results").append("<li>" + testNoteList()+"</li>");
     $("#results").append("<li>" + testNoteListReturnNotes()+"</li>");
+    $("#results").append("<li>" + testNoteListViewInstantiation()+"</li>");
+    $("#results").append("<li>" + testNoteListViewReturnsNotesInHTML()+"</li>");
+    $("#results").append("<li>" + testNoteListViewHandlesVariousLengths()+"</li>");
+    $("#results").append("<li>" + testNoteListViewHandlesZeroLength()+"</li>");
+
+
+
 
   });
 </script>
 
 <body>
-
 <ol id='results'> </ol>
 
 </body>
