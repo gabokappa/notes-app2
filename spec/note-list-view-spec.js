@@ -33,11 +33,11 @@ function testNoteListViewInstantiation(){
 function testNoteListViewHandlesVariousLengths() {
   try {
        let noteList = new NoteList();
-       noteList.add("note1")
+       noteList.add("This is a longer test that should only bring back 20 characters")
 
        let noteListView = new NoteListView(noteList);
 
-      assert.isTrue(noteListView.returnNotesHTML() === "<ul><li><div>note1</div></li></ul>");
+      assert.isTrue(noteListView.returnNotesHTML() === "<ul><li><div>This is a longer tes</div></li></ul>");
 
   }
   catch(err) {
@@ -59,21 +59,3 @@ function testNoteListViewHandlesZeroLength() {
   }
   return "Pass - " + arguments.callee.name;
 }
-
-// function testNoteListReturnNotes(){
-//     try {
-//
-//         let noteList = new NoteList();
-//
-//         noteList.add("note1");
-//         noteList.add("note2");
-//
-//
-//         assert.isTrue(noteList.returnNotes() ===  noteList.notes)
-//
-//     }
-//     catch(err) {
-//         return "Error - " + arguments.callee.name + " : " + err;
-//     }
-//     return "Pass - " + arguments.callee.name;
-// }

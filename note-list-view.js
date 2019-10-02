@@ -10,12 +10,12 @@
       if (arrayIn.length === 0)
         return null
       for (let i = 0; i < arrayIn.length; i++) {
-        arrayOut.push(arrayIn[i].getText());
+        arrayOut.push(arrayIn[i].getText().slice(0, 20));
       }
     return `<ul><li><div>${arrayOut.join("</div></li><li><div>")}</div></li></ul>`
 
   };
 
-  exports.NoteListView = NoteListView;
+exports.NoteListView = NoteListView;
 
 })(this);
