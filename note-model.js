@@ -1,5 +1,5 @@
 (function(exports) {
-var count = 0;
+var count = -1;
   function Note(text){
      this.text = text;
      this.id = count;

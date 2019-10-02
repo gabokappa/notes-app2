@@ -28,6 +28,7 @@
 
 <script>
   $(document).ready(function(){
+    $("#results").append("<li>" + testNoteObjectHasId()+"</li>");
     $("#results").append("<li>" + testCreateNoteWithText()+"</li>");
     $("#results").append("<li>" + testNoteList()+"</li>");
     $("#results").append("<li>" + testNoteListReturnNotes()+"</li>");
@@ -38,6 +39,7 @@
     $("#results").append("<li>" + testNoteController()+"</li>");
     $("#results").append("<li>" + testSingleNoteViewInstantiation()+"</li>");
     $("#results").append("<li>" + testSingleNoteViewHTML()+"</li>");
+
 
   });
 </script>
