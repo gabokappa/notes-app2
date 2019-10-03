@@ -7,18 +7,28 @@
     <script src="note-model.js"></script>
     <script src="note-list-model.js"></script>
     <script src="note-list-view.js"></script>
+    <script src="note-controller.js"></script>
 
 </head>
 
 
 <body>
 
-<div id="app"> Hello </div>
+<div id="app"> Hello world</div>
 
  <script src="note-controller.js"></script>
 <script src="spec/note-controller-spec.js"></script>
 
 
 </body>
+<script>
+    const listOfTestNotes = new NoteList();
+    listOfTestNotes.add("note1yryryryryryryryryryryryryryryryryryryryry");
+    listOfTestNotes.add("note2yryryryryryryryryryryryryryryryryryryryry");
+    listOfTestNotes.add("note3yryryryryryryryryryryryryryryryryryryryry");
+
+    const testNoteControlleree = new NoteController(listOfTestNotes);
+    testNoteControlleree.insertHTML(document.getElementById('app'));
+</script>
 
 </html>
